@@ -69,7 +69,7 @@ public class LoginTest extends WebMethods
 			siri.click(e.btn_toggleMenu);
 			waitforSeconds(5000);
 			siri.click(e.btn_logout);
-			
+			System.out.println("Hi Indra we're in Github, Congo");
 			TearDown();
 
 		}catch(Exception e) 
