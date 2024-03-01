@@ -1,18 +1,22 @@
 package PageMethods;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
-
+import org.apache.commons.io.FileUtils;
 import Helpers.WebDriverHelper;
 
 public class WebMethods 
 {
-	static WebDriver driver;
+	static WebDriver driver; static int sscount =0;
 	public WebMethods(WebDriver driver) 
 	{
 		this.driver= driver;
@@ -62,7 +66,11 @@ public class WebMethods
 		if(url.contains("cura")) {
 		System.out.println("Hi User Navigating to Cura HealthCare HomePage" );
 		}
+		else {
+			System.out.println("Hi user , Navigating to : "+url);
+		}
 		driver.navigate().to(url);
+		
 		
 	}
 	
@@ -77,5 +85,19 @@ public class WebMethods
 		}
 	}
 
+	public static void takeScreenshot(WebDriver driver) 
+	{
+		try {
+			TakesScreenshot ss = ((TakesScreenshot)driver);
+			File srcFile = ss.getScreenshotAs(OutputType.FILE);
+			File destFile = new File("user.dir"+"/Screenshots/"+"screenshot"+sscount+".png");
+			sscount++;
+			FileUtils.copyFile(srcFile, destFile);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			e.getLocalizedMessage();
+		}
+	}
 
 }

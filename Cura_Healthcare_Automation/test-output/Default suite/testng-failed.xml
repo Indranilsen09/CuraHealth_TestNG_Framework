@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RegressionSuite.AppointmentTest">
+      <class name="RegressionSuite.InsecureCertsTest">
         <methods>
-          <include name="setup"/>
-          <include name="AppointmentTest1"/>
-          <include name="TearDown"/>
+          <include name="Setup"/>
         </methods>
-      </class> <!-- RegressionSuite.AppointmentTest -->
+      </class> <!-- RegressionSuite.InsecureCertsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

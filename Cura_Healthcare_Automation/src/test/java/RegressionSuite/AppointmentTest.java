@@ -34,7 +34,7 @@ public class AppointmentTest
 	static ExtentReporters logtest;
 
 	
-	@BeforeTest
+	@BeforeMethod
 	public static void setup() throws Exception 
 	{
 		
@@ -123,6 +123,7 @@ public class AppointmentTest
 	@AfterTest
 	static void TearDown() throws Exception
 	{
+		
 		System.out.println("Closing Browser");
 		driver.manage().deleteAllCookies();
 		System.out.println(driver.manage().logs().toString());
