@@ -3,16 +3,13 @@ package RegressionSuite;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
 import Helpers.ExtentReporters;
 import Helpers.ReadProperties;
 import Helpers.WebDriverHelper;
