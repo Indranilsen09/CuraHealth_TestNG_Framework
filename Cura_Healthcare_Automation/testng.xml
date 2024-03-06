@@ -1,0 +1,9 @@
+
+<suite parallel="classes" name="RegressionSuite">
+  <test thread-count="5" parallel="classes" name="CuraandInsecureTest">
+    <classes>
+      <class name="RegressionSuite.InsecureCertsTest"/>
+	  <class name="RegressionSuite.AppointmentTest"/>
+    </classes>
+  </test> <!-- Cura&InsecureTest -->
+</suite> <!-- RegressionSuite -->
