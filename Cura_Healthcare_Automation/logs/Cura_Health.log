@@ -1,0 +1,4 @@
+[ERROR]  24-Mar-09 03:40:41 [main] This is an Error Message 
+[INFO]  24-Mar-09 03:40:41 [main] This is an Info 
+[WARN]  24-Mar-09 03:40:41 [main] This is an warning 
+[FATAL]  24-Mar-09 03:40:41 [main] This is an Fatal Errror Message 
