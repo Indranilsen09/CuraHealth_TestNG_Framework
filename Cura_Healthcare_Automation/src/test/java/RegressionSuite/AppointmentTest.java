@@ -112,7 +112,7 @@ public class AppointmentTest
 		siri.waitforSeconds(5);
 		siri.click(e.btn_logout);
 		test.log(Status.PASS, "Logged Out Successfully");
-		System.out.println("Hi Indra We've Successfully in Github");
+		
 		}catch(Exception e) 
 		{
 			e.printStackTrace();

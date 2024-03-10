@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="classes" name="RegressionSuite">
   <test thread-count="5" parallel="classes" name="CuraandInsecureTest">
     <classes>

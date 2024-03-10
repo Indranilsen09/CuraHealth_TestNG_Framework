@@ -40,7 +40,16 @@ public class WebMethods
 			WebElement btn = driver.findElement(by);
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			js.executeScript("arguments[0].click()", btn);
+			if(btn.getText().isEmpty()) 
+			{
+				if(btn.getAttribute("value").isBlank()) {
+					
+				}else {
+					logger.info(btn.getAttribute("value")+" is Clicked");
+				}
+			}else {
 			logger.info(btn.getText()+" is Clicked");
+			}
 		}
 		}catch(Exception e) 
 		{
@@ -57,8 +66,11 @@ public class WebMethods
 			driver.findElement(by).click();
 			Thread.sleep(2000);
 			driver.findElement(by).sendKeys(text);
+			if(driver.findElement(by).getText().isBlank()) {
+				logger.info(text+" is Entered in "+ driver.findElement(by).getAttribute("value"));
+			}else {
 			logger.info(text+" is Entered in "+ driver.findElement(by).getText());
-			
+			}
 		}
 		}catch(Exception e) 
 		{
